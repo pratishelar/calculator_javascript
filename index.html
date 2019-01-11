@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script type="text/javascript" src="js/calci.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Calculator using JavaScript</title>
+</head>
+
+<body>
+    <h1>Java script Calculator</h1>
+    <form class="calcForm" name="calculator">
+        <input type="text" class="calcDisplay" placeholder="Insert Value" id="display" />
+        <table align="center" cellspacing="10" cellpadding="10">
+            <tr class="calcRow">
+                <td><input type="button" class="calcButton button" value="7" onclick="numInput('7')" /></td>
+                <td><input type="button" class="calcButton button" value="8" onclick="numInput('8')" /></td>
+                <td><input type="button" class="calcButton button" value="9" onclick="numInput('9')" /></td>
+                <td><input type="button" class="calcButton button" value="+" onclick="setOperation('add')" /></td>
+            </tr>
+
+            <tr class="calcRow">
+                <td><input type="button" class="calcButton button" value="4" onclick="numInput('4')" /></td>
+                <td><input type="button" class="calcButton button" value="5" onclick="numInput('5')" /></td>
+                <td><input type="button" class="calcButton button" value="6" onclick="numInput('6')" /></td>
+                <td><input type="button" class="calcButton button" value="-" onclick="setOperation('subtract')" /></td>
+            </tr>
+            <tr class="calcRow">
+                <td><input type="button" class="calcButton button" value="1" onclick="numInput('1')" /></td>
+                <td><input type="button" class="calcButton button" value="2" onclick="numInput('2')" /></td>
+                <td><input type="button" class="calcButton button" value="3" onclick="numInput('3')" /></td>
+                <td><input type="button" class="calcButton button" value="x" onclick="setOperation('multiply')" /></td>
+            </tr>
+            <tr class="calcRow">
+                <td><input type="button" class="calcButton button" value="0" onclick="numInput('0')" /></td>
+                <td><input type="button" class="calcButton button" value="." onclick="insertDecimal('.')" /></td>
+                <td><input type="button" class="calcButton button" value="C" onclick="clearDisplay()" /></td>
+                <td><input type="button" class="calcButton button" value="=" onclick="calculate()" /></td>
+            </tr>
+            <tr class="calcRow">
+                <td><input type="button" class="calcButton button" value="Sin" onclick="sin()" /></td>
+                <td><input type="button" class="calcButton button" value="Cos" onclick="cos()" /></td>
+                <td><input type="button" class="calcButton button" value="Tan" onclick="tan()" /></td>
+                <td><input type="button" class="calcButton button" value="/" onclick="setOperation('divide')" /></td>
+            </tr>
+            <tr class="calcRow">
+                <td><input type="button" class="calcButton button" value="Pi" onclick="piee()" /></td>
+                <td><input type="button" class="calcButton button" value="^" onclick="setOperation('exponent')" /></td>
+                <td><input type="button" class="calcButton button" value="Log" onclick="log()" /></td>
+                <td><input type="button" class="calcButton button" value="&#8730;" onclick="squareroot()" /></td>
+
+            </tr>
+            <tr class="calcRow">
+                <td><input type="button" class="calcButton button" value="+/-" onclick="minusvalue(display.value)" /></td>
+                <td><input type="button" class="calcButton button" value="x!" onclick="factorial(display.value)" /></td>
+                <td><input type="button" class="calcButton button" value="&#8592;" onclick="del()" /></td>
+                <td><input type="button" class="calcButton button" value="%" onclick="setOperation('mod')" /></td>
+            </tr>
+        </table>
+    </form>
+    <footer>
+        <p>Copyrights &copy; Pratish Shelar</p>
+        <p id="footer" ></p>
+    </footer>
+
+    <script>
+        document.getElementById("footer").innerHTML = Date();
+    </script>
+    
+</body>
+
+</html>
